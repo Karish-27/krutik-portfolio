@@ -9,6 +9,7 @@ import Works from "./sections/Works";
 import ContactSummary from "./sections/ContactSummary";
 import Contact from "./sections/Contact";
 import { useProgress } from "@react-three/drei";
+import ClientsLogo from "./sections/ClientsLogo";
 
 const App = () => {
   const { progress } = useProgress();
@@ -46,6 +47,7 @@ const App = () => {
         <Services />
         <About />
         <Works />
+        <ClientsLogo />
         <ContactSummary />
         <Contact />
       </div>
