@@ -141,10 +141,9 @@ const Testimonials = () => {
         className="grid grid-cols-1 md:grid-cols-3 items-center justify-center gap-10 md:gap-16"
       >
         {stats.map((stat, index) => (
-          <div className="bg-gradient-to-b from-[#0d0d0d] via-white/60 to-[#0d0d0d] md:pr-[1px] last:pr-0">
+          <div key={index} className="stat-item bg-gradient-to-b from-[#0d0d0d] via-white/60 to-[#0d0d0d] md:pr-[1px] last:pr-0">
             <div
-              key={index}
-              className="stat-item flex justify-center items-center gap-8 bg-[#0d0d0d]"
+              className="flex justify-center items-center gap-8 bg-[#0d0d0d]"
             >
               <div className="text-center">
                 <span
