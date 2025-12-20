@@ -51,7 +51,7 @@ const About = () => {
           ref={imgRef}
           src="images/shaed-noor.webp"
           alt="shaed noor photo"
-          className="rounded-xl"
+          className="rounded-xl w-full lg:w-2/5"
         />
         <AnimatedTextLines text={aboutText} className={"w-full text-lg"} lineGap="pb-5 last:pb-0"/>
       </div>
