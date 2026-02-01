@@ -40,6 +40,10 @@
   letter-spacing: 1px;
   font-weight: 500;
 }
+
+.hidden-email {
+  visibility: hidden;
+}
 .navbar-title {
   font-weight: 700;
   font-size: 14px;

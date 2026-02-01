@@ -50,8 +50,11 @@
     width: var(--cWidth);
     justify-content: right;
     max-width: 1920px;
-    height: var(--vh);
-    padding: 0px;
+    /* avoid forcing a full viewport height which creates extra spacing
+       below the hero; allow content to size naturally and add a modest
+       top padding so the section isn't flush against the previous one */
+    height: auto;
+    padding-top: 48px;
     opacity: 1;
   }
   .about-me {

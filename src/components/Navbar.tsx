@@ -46,12 +46,12 @@ const Navbar = () => {
           Logo
         </a>
         <a
-          href="mailto:example@mail.com"
-          className="navbar-connect"
+          href="/#"
+          className="navbar-connect hidden-email"
           data-cursor="disable"
-        >
-          example@mail.com
-        </a>
+          aria-hidden="true"
+          tabIndex={-1}
+        />
         <ul>
           <li>
             <a data-href="#about" href="#about">

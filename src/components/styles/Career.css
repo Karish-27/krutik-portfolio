@@ -8,8 +8,9 @@
   opacity: 1;
   height: auto;
   margin: auto;
-  margin-bottom: 250px;
-  padding: 120px 0px;
+  /* reduce large bottom margin and vertical padding to tighten spacing */
+  margin-bottom: 80px;
+  padding: 60px 0px;
 }
 
 .career-section h2 {
@@ -22,8 +23,9 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
-  margin-top: 50px;
-  margin-bottom: 90px;
+  /* tighten heading spacing */
+  margin-top: 20px;
+  margin-bottom: 40px;
 }
 .career-section h2 > span {
   font-family: "Geist", sans-serif;
@@ -87,7 +89,7 @@
     var(--accentColor) 50%,
     transparent 95%
   );
-  max-height: 0%;
+  max-height: 100%;
 }
 .career-dot {
   position: absolute;
@@ -101,6 +103,25 @@
   box-shadow: 0px 0px 5px 2px #d29bff, 0px 0px 15px 8px #d097ff,
     0px 0px 110px 20px #f2c0ff;
   animation: timeline 0.8s linear infinite forwards;
+}
+
+/* fallback CSS animation when GSAP doesn't initialize immediately */
+.career-timeline.animate {
+  animation: growLine 0.5s ease forwards;
+}
+
+@keyframes growLine {
+  0% {
+    max-height: 10%;
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    max-height: 100%;
+    opacity: 1;
+  }
 }
 
 @keyframes timeline {

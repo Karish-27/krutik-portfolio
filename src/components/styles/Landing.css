@@ -158,6 +158,7 @@
 }
 .landing-intro {
   position: absolute;
+  font-weight: 300;
   z-index: 9;
   top: 12%;
   left: 0;
@@ -226,6 +227,9 @@ h2.landing-info-h2 {
   position: relative;
   margin-left: -5px;
 }
+
+/* Hide the oversized background label so only the animated foreground remains */
+.landing-info h2.landing-info-h2 { display: none !important; }
 .landing-h2-2 {
   position: absolute;
   top: 0;
@@ -302,39 +306,79 @@ h2.landing-info-h2 {
   .character-model::before {
     display: none;
   }
-  .landing-intro {
+  /* Center the whole intro+info block as a group */
+  .landing-center {
+    position: absolute;
+    left: 50%;
     top: 50%;
-    left: auto;
-    right: 66%;
-    transform: translate(0%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 9;
+    width: 100%;
+    max-width: 1000px;
+    padding: 0 20px;
+    text-align: center;
+    pointer-events: none;
   }
 
+  .landing-center .landing-intro,
+  .landing-center .landing-info {
+    position: static;
+    transform: none;
+    left: auto;
+    top: auto;
+    width: 100%;
+    pointer-events: auto;
+  }
+
+  .landing-center .landing-info {
+    margin-top: 6px;
+  }
+}
+
+/* Keep the container centered but overlay the animated labels so
+   both role lines occupy the exact same position during animation. */
+@media screen and (min-width: 1025px) {
   .landing-info {
-    bottom: auto;
-    top: 51%;
-    z-index: inherit;
-    text-align: left;
-    transform: translate(0%, -50%);
-    right: auto;
-    left: 66%;
+    display: block;
+    position: relative; /* anchor for absolutely positioned labels */
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .landing-info h2 {
+    margin-left: 0;
+    margin-top: 8px;
+    display: block;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    height: 1em; /* reserve vertical space */
+  }
+
+  /* Foreground animated labels: position them absolutely centered
+     inside the .landing-info h2 so they overlap exactly. */
+  .landing-h2-info,
+  .landing-h2-info-1 {
+    position: absolute !important;
+    left: 50% !important;
+    top: 0 !important;
+    transform: translateX(-50%) !important;
+    display: block !important;
+    width: auto !important;
+    text-align: center !important;
+  }
+
+  /* Keep the decorative/hidden background h2 out of view (already hidden),
+     make sure any other role elements don't affect layout. */
+  .landing-h2-1,
+  .landing-h2-2 {
+    display: none !important;
   }
 }
 @media screen and (min-width: 1200px) {
-  .landing-intro {
-    top: 50%;
-    left: auto;
-    right: 70%;
-    transform: translate(0%, -50%);
-  }
-
-  .landing-info {
-    bottom: auto;
-    top: 51%;
-    z-index: inherit;
-    text-align: left;
-    transform: translate(0%, -50%);
-    right: auto;
-    left: 70%;
+  .landing-center {
+    max-width: 1200px;
   }
 }
 @media screen and (min-width: 1600px) {
