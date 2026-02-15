@@ -1,10 +1,137 @@
 .landing-section {
-  width: 100%;
-  max-width: var(--cMaxWidth);
-  margin: auto;
+  width: 100vw;
   position: relative;
-  height: var(--vh);
+  min-height: 100vh;
+  height: 110vh;
+  overflow-x: hidden;
 }
+
+@media (max-width: 1200px) {
+  .landing-section {
+    height: 140vh;
+  }
+}
+
+@media (max-width: 900px) {
+  .landing-section {
+    height: 150vh;
+  }
+}
+
+@media (max-width: 600px) {
+  .landing-section {
+    height: 160vh;
+  }
+}
+
+.hero-name-container {
+  position: absolute;
+  left: 5%;
+  top: 50%;
+  bottom: 10%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.hero-name {
+  font-family: 'Tusker Grotesk', sans-serif;
+  font-size: clamp(45px, 10vw, 130px);
+  font-weight: 500;
+  color: #ffffff;
+  line-height: 0.9;
+  letter-spacing: -2px;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.hero-name:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+/* --- Hero Role Label (UI/UX DESIGNER) --- */
+.hero-role {
+  position: absolute;
+  right: 5%;
+  top: 20%;
+  z-index: 12;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.hero-role-line {
+  font-family: 'Tusker Grotesk', sans-serif;
+  font-size: clamp(18px, 2.5vw, 36px);
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.2;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* --- Portfolio Showcase Label (bottom-left) --- */
+.hero-portfolio-label {
+  position: absolute;
+  left: 5%;
+  bottom: 5%;
+  z-index: 12;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+}
+
+.hero-portfolio-my {
+  font-family: 'Micro 5', 'Courier New', monospace;
+  font-size: clamp(28px, 4vw, 52px);
+  font-weight: 400;
+  color: #ffffff;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  line-height: 1.1;
+  margin-bottom: -4px;
+}
+
+.hero-portfolio-title {
+  font-family: 'Micro 5', 'Courier New', monospace;
+  font-size: clamp(28px, 4vw, 52px);
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  line-height: 0.3;
+}
+
+.hero-portfolio-sub {
+  font-family: 'Micro 5', 'Courier New', monospace;
+  font-size: clamp(14px, 1.5vw, 22px);
+  font-weight: 400;
+  color: #ffffff;
+  letter-spacing: 14px;
+  text-transform: uppercase;
+}
+
+.hero-bg-text {
+  position: absolute;
+  left: 50%;
+  top: 85%;
+  transform: translate(-50%, -50%);
+  font-family: 'Tusker Grotesk', sans-serif;
+  font-size: clamp(140px, 32vw, 340px);
+  font-stretch: ultra-expanded;
+  letter-spacing: 20px;
+  font-variation-settings: 'wdth' 250;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.08);
+  line-height: 1;
+  /* Remove negative letter-spacing for extra width */
+  text-transform: uppercase;
+  white-space: nowrap;
+  z-index: 1;
+  pointer-events: none;
+  user-select: none;
+}
+
 .landing-container {
   width: 100%;
   margin: auto;
@@ -12,6 +139,7 @@
   position: relative;
   /* max-width: var(--cMaxWidth); */
 }
+
 .landing-circle1 {
   top: 0%;
   left: 0%;
@@ -25,25 +153,26 @@
   border-radius: 50%;
   animation: loadingCircle 5s linear infinite;
 }
+
 .nav-fade {
   position: fixed;
   top: 0;
   width: 100%;
   height: 130px;
-  background-image: linear-gradient(
-    0deg,
-    transparent,
-    var(--backgroundColor) 70%
-  );
+  background-image: linear-gradient(0deg,
+      transparent,
+      var(--backgroundColor) 70%);
   pointer-events: none;
   z-index: 12;
   opacity: 0;
   left: 0;
 }
+
 @keyframes loadingCircle {
   0% {
     transform: translate(-95%, -75%) rotateZ(0deg);
   }
+
   100% {
     transform: translate(-95%, -75%) rotateZ(360deg);
   }
@@ -64,11 +193,13 @@
   border-radius: 50%;
   animation: loadingCircle2 5s linear infinite;
 }
+
 @keyframes loadingCircle2 {
   100% {
     transform: translate(calc(100% - 2px), -50%) rotate(360deg);
   }
 }
+
 .landing-video,
 .landing-image {
   position: absolute;
@@ -77,11 +208,13 @@
   left: 50%;
   transform: translateX(-50%);
 }
+
 .landing-image img {
   height: 100%;
   z-index: 2;
   position: relative;
 }
+
 .character-rim {
   position: absolute;
   width: 400px;
@@ -97,6 +230,7 @@
   transform: translate(-50%, 100%) scale(1.4);
   opacity: 0;
 }
+
 .character-model {
   height: 80%;
   height: 80vh;
@@ -110,21 +244,21 @@
   bottom: 50px;
   pointer-events: inherit;
 }
+
 .character-model::after {
   content: "";
   width: 100vw;
   height: 250px;
-  background-image: linear-gradient(
-    to bottom,
-    transparent,
-    var(--backgroundColor) 70%
-  );
+  background-image: linear-gradient(to bottom,
+      transparent,
+      var(--backgroundColor) 70%);
   bottom: -50px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 9;
   position: absolute;
 }
+
 .character-model::before {
   content: "";
   width: 100vw;
@@ -136,16 +270,19 @@
   z-index: 9;
   position: absolute;
 }
+
 .character-loaded .character-rim {
   animation: backlight 3s forwards;
   animation-delay: 0.3s;
   opacity: 0;
 }
+
 .character-model canvas {
   position: relative;
   pointer-events: none;
   z-index: 2;
 }
+
 .character-hover {
   position: absolute;
   width: 280px;
@@ -156,6 +293,7 @@
   transform: translate(-50%, -50%);
   border-radius: 50%;
 }
+
 .landing-hero-text {
   position: absolute;
   top: 40%;
@@ -172,7 +310,7 @@
 
 .landing-name-karishma {
   font-family: 'NavillemBd', sans-serif !important;
-  font-size: clamp(60px, 12vw, 160px) !important;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.10), rgba(255, 255, 255, 0.00));
   line-height: 1 !important;
   color: rgba(139, 92, 246, 0.6) !important;
   font-weight: bold !important;
@@ -204,6 +342,7 @@
   visibility: visible;
   opacity: 1;
 }
+
 .landing-intro h2 {
   margin: 0;
   color: var(--accentColor);
@@ -274,6 +413,7 @@
   align-items: flex-end;
   justify-content: flex-end;
 }
+
 .landing-info h3 {
   font-size: clamp(12px, 1.5vw, 22px);
   letter-spacing: 0.05em;
@@ -285,6 +425,7 @@
   text-transform: uppercase;
   line-height: 1;
 }
+
 .landing-info h2 {
   margin: 0;
   font-family: 'NavillemBd', sans-serif;
@@ -298,61 +439,55 @@
   text-align: right;
   white-space: nowrap;
 }
-.landing-h2-info-1 {
+
+.landing-h2-info-1 {}
+
+/* --- Avatar Styles --- */
+.avatar-container {
   position: absolute;
-  top: 0;
-  right: 0;
-}
-h2.landing-info-h2 {
-  color: #c481ff;
-  font-size: 42px;
-  width: 120%;
-  margin: 0;
-  font-family: 'NavillemBd', sans-serif;
-  font-weight: 600;
-  position: relative;
-  margin-left: -5px;
+  bottom: 0;
+  right: 5%;
+  z-index: 10;
+  height: 88vh;
+  width: auto;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  pointer-events: none;
 }
 
-/* Hide the oversized background label so only the animated foreground remains */
-.landing-info h2.landing-info-h2 { display: none !important; }
-.landing-h2-2 {
-  position: absolute;
-  top: 0;
+.avatar-img {
+  height: 90%;
+  width: auto;
+  object-fit: contain;
+  border-radius: 0;
+  box-shadow: none;
+  background: none;
+  z-index: 10;
+  margin-right: 100px;
 }
-.landing-info-h2::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 120%;
-  z-index: 3;
-  background-image: linear-gradient(
-    0deg,
-    var(--backgroundColor) 40%,
-    rgba(0, 0, 0, 0) 110%
-  );
-  top: 0;
-  left: 0;
+
+
+
+.character-model {
+  z-index: 0;
 }
-@media screen and (min-width: 500px) {
-  .landing-circle2 {
-    display: block;
-  }
-  .character-model {
-    z-index: 0;
-  }
-  h2.landing-info-h2 {
-    font-size: 30px;
-  }
+
+h2.landing-info-h2 {
+  font-size: 30px;
 }
+
+
 @media screen and (min-width: 768px) {
   .character-model {
     height: 80vh;
   }
+
   h2.landing-info-h2 {
     font-size: 45px;
   }
 }
+
 @media screen and (min-width: 1025px) {
   .character-model {
     height: 100vh;
@@ -360,6 +495,7 @@ h2.landing-info-h2 {
     z-index: 11;
     position: fixed;
   }
+
   .character-model::after,
   .character-model::before {
     display: none;
@@ -369,45 +505,52 @@ h2.landing-info-h2 {
 /* Keep the container centered but overlay the animated labels so
    both role lines occupy the exact same position during animation. */
 @media screen and (min-width: 1025px) {
-  .landing-info h2 {
-    margin-left: 0;
-    margin-top: 2px;
-    display: block;
-    width: auto;
-    text-align: right;
-    position: relative;
-    height: auto;
+  .avatar-container {
+    position: absolute;
+    bottom: 0;
+    right: 5%;
+    top: auto;
+    transform: none;
+    z-index: 10;
+    height: 95vh;
   }
 
-  /* Foreground animated labels: position them absolutely right-aligned
-     inside the .landing-info h2 so they overlap exactly. */
-  .landing-h2-info,
-  .landing-h2-info-1 {
-    position: absolute !important;
-    right: 0 !important;
-    top: 0 !important;
-    transform: none !important;
-    display: block !important;
-    width: auto !important;
-    text-align: right !important;
-  }
-
-  /* Keep the decorative/hidden background h2 out of view (already hidden),
-     make sure any other role elements don't affect layout. */
-  .landing-h2-1,
-  .landing-h2-2 {
-    display: none !important;
-  }
+  /* Removed misplaced properties */
 }
+
+/* Foreground animated labels: position them absolutely right-aligned
+     inside the .landing-info h2 so they overlap exactly. */
+.landing-h2-info,
+.landing-h2-info-1 {
+  position: absolute !important;
+  right: 0 !important;
+  top: 0 !important;
+  transform: none !important;
+  display: block !important;
+  width: auto !important;
+  text-align: right !important;
+}
+
+/* Keep the decorative/hidden background h2 out of view (already hidden),
+     make sure any other role elements don't affect layout. */
+.landing-h2-1,
+.landing-h2-2 {
+  display: none !important;
+}
+
+/* Removed extra closing brace */
+
 @media screen and (min-width: 1200px) {
   .landing-center {
     max-width: 1200px;
   }
 }
+
 @media screen and (min-width: 1600px) {
   .landing-hero-text {
     max-width: 1600px;
   }
+
   h2.landing-info-h2 {
     font-size: 75px;
   }

@@ -1,44 +1,47 @@
 import { PropsWithChildren } from "react";
 import "./styles/Landing.css";
-import Ballpit from "./Ballpit";
 
 const Landing = ({ children }: PropsWithChildren) => {
   return (
     <>
-      <div className="landing-section" id="landingDiv" data-cursor="disable" style={{ position: 'relative', overflow: 'hidden', backgroundImage: 'url(/images/bghero.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
-        <div style={{ position: 'absolute', inset: 0, zIndex: 0, backgroundColor: 'rgba(0, 0, 0, 0.3)' }} aria-hidden="true">
-          <Ballpit
-            count={50}
-            gravity={0.01}
-            friction={0.9975}
-            wallBounce={0.95}
-            followCursor={true}
+      <div
+        className="landing-section"
+        id="landingDiv"
+        data-cursor="disable"
+        style={{
+          position: 'relative',
+          overflow: 'hidden',
+          backgroundImage: 'url(/images/BGhero.svg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          minHeight: '100vh',
+        }}
+      >
+        {children}
+        <div className="hero-name-container">
+          <h1 className="hero-name">KRUTIK</h1>
+          <h1 className="hero-name">PARMAR</h1>
+        </div>
+        <div className="hero-role">
+          <span className="hero-role-line">UI/UX</span>
+          <span className="hero-role-line">DESIGNER</span>
+        </div>
+        <div className="avatar-container">
+          <img
+            src="/images/avtar.svg"
+            alt="Avatar"
+            className="avatar-img"
           />
         </div>
-        <div className="landing-container" style={{ position: 'relative', zIndex: 1 }}>
-          <div className="landing-center">
-            <div className="landing-hero-text">
-              <h1 className="landing-name-karishma">KARISHMA</h1>
-              <div className="landing-bottom-row">
-                <div className="landing-intro">
-                  <h1 className="landing-name-kumavat">KUMAVAT</h1>
-                </div>
-                <div className="landing-info">
-                  <h3>A CREATIVE</h3>
-                  <h2 className="landing-info-h2">
-                    <div className="landing-h2-1">WEB DEVELOPER</div>
-                    <div className="landing-h2-2">MERN DEVELOPER</div>
-                  </h2>
-                  <h2>
-                    <div className="landing-h2-info">WEB DEVELOPER</div>
-                    <div className="landing-h2-info-1">MERN DEVELOPER</div>
-                  </h2>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div className="hero-portfolio-label">
+          <span className="hero-portfolio-my">MY</span>
+          <span className="hero-portfolio-title">PORTFOLIO</span>
+          <span className="hero-portfolio-sub">SHOWCASE</span>
         </div>
-        {children}
+        <div className="hero-bg-text" aria-hidden="true">
+          KRUTIK
+        </div>
       </div>
     </>
   );

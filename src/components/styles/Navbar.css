@@ -27,8 +27,9 @@
   margin-left: 0px;
   letter-spacing: 1px;
   color: #ccc;
-  font-weight: 600;
+  font-weight: 400;
   cursor: pointer;
+  font-family: 'Raleway', sans-serif !important;
 }
 .navbar-connect {
   position: absolute;

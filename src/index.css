@@ -1,4 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap");
+
+@font-face {
+  font-family: 'Tusker Grotesk';
+  src: url('https://fonts.cdnfonts.com/s/91444/TuskerGrotesk-5500Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
 
 @font-face {
   font-family: 'NavillemBd';

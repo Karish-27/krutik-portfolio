@@ -43,7 +43,7 @@ const Navbar = () => {
     <>
       <div className="header">
         <a href="/#" className="navbar-title" data-cursor="disable">
-          Logo
+          <img src="/images/MRDZINER-LOGO.svg" alt="MRDZINER Logo" style={{ height: '40px' }} />
         </a>
         <a
           href="/#"
@@ -71,8 +71,6 @@ const Navbar = () => {
         </ul>
       </div>
 
-      <div className="landing-circle1"></div>
-      <div className="landing-circle2"></div>
       <div className="nav-fade"></div>
     </>
   );
