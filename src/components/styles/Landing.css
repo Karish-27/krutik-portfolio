@@ -34,11 +34,11 @@
 }
 
 .hero-name {
-  font-family: 'Tusker Grotesk', sans-serif;
+  font-family: 'Bebas Neue', sans-serif;
   font-size: clamp(45px, 10vw, 130px);
   font-weight: 500;
   color: #ffffff;
-  line-height: 0.9;
+  line-height: 0.6;
   letter-spacing: -2px;
   margin: 0;
   text-transform: uppercase;
@@ -52,7 +52,7 @@
 .hero-role {
   position: absolute;
   right: 5%;
-  top: 20%;
+  top: 28%;
   z-index: 12;
   display: flex;
   flex-direction: column;
@@ -60,9 +60,9 @@
 }
 
 .hero-role-line {
-  font-family: 'Tusker Grotesk', sans-serif;
+  font-family: 'Anton', sans-serif;
   font-size: clamp(18px, 2.5vw, 36px);
-  font-weight: 700;
+  font-weight: 400;
   color: #ffffff;
   line-height: 1.2;
   letter-spacing: 2px;
@@ -113,23 +113,24 @@
 
 .hero-bg-text {
   position: absolute;
-  left: 50%;
+  left: 49%;
   top: 85%;
-  transform: translate(-50%, -50%);
-  font-family: 'Tusker Grotesk', sans-serif;
-  font-size: clamp(140px, 32vw, 340px);
+  transform: translate(-50%, -50%) scaleX(0.96);
+  font-family: 'Anton', sans-serif;
+  font-size: 34vw;
   font-stretch: ultra-expanded;
-  letter-spacing: 20px;
+  letter-spacing: 0.1em;
   font-variation-settings: 'wdth' 250;
-  font-weight: 500;
+  font-weight: 400;
   color: rgba(255, 255, 255, 0.08);
   line-height: 1;
-  /* Remove negative letter-spacing for extra width */
   text-transform: uppercase;
   white-space: nowrap;
   z-index: 1;
   pointer-events: none;
   user-select: none;
+  width: 100%;
+  text-align: center;
 }
 
 .landing-container {

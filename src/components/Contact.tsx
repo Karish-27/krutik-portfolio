@@ -1,58 +1,34 @@
-import { MdArrowOutward, MdCopyright } from "react-icons/md";
 import "./styles/Contact.css";
 
 const Contact = () => {
-  return (
-    <div className="contact-section section-container" id="contact">
-      <div className="contact-container">
-        <h3>Contact</h3>
-        <div className="contact-flex">
-          <div className="contact-box">
-            <h4>Email</h4>
-            <p>
-              <a href="mailto:karishmakumavat27@mail.com" data-cursor="disable">
-                karishmakumavat27@mail.com
-              </a>
-            </p>
-            <h4>Phone</h4>
-            <p>
-              <a href="tel:+919512490729" data-cursor="disable">
-                +91 9512490729
-              </a>
-            </p>
-          </div>
-          <div className="contact-box">
-            <h4>Social</h4>
-            <a
-              href="https://github.com/Karish-27"
-              target="_blank"
-              data-cursor="disable"
-              className="contact-social"
-            >
-              Github <MdArrowOutward />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/karishma-kumavat-480891241"
-              target="_blank"
-              data-cursor="disable"
-              className="contact-social"
-            >
-              Linkedin <MdArrowOutward />
-            </a>
-            
-          </div>
-          <div className="contact-box">
-            <h2>
-              Developed <br /> by <span>Karishma Kumavat</span>
-            </h2>
-            <h5>
-              <MdCopyright /> 2026
-            </h5>
-          </div>
+    return (
+        <div className="contact-section" id="contact">
+            <div className="contact-top-marquee" aria-hidden="true">
+                <span>C&nbsp;&nbsp;O&nbsp;&nbsp;N&nbsp;&nbsp;T&nbsp;&nbsp;A&nbsp;&nbsp;C&nbsp;&nbsp;T</span>
+                <span>M&nbsp;&nbsp;E</span>
+                <span>S&nbsp;&nbsp;E&nbsp;&nbsp;C&nbsp;&nbsp;T&nbsp;&nbsp;I&nbsp;&nbsp;O&nbsp;&nbsp;N</span>
+            </div>
+            <div className="contact-content">
+                <div className="contact-title-container">
+                    <div className="contact-info-row">
+                        <span className="contact-email">mrdziner.mail@gmail.com</span>
+                        <span className="contact-phone">+91 9265542717</span>
+                    </div>
+
+                    <h1 className="contact-heading">CONTACT ME</h1>
+                </div>
+            </div>
+
+            {/* Background watermark text */}
+            <div className="contact-watermark" aria-hidden="true">
+                EVERYONE
+            </div>
+
+            <div className="contact-avatar-wrapper">
+                <img src="/images/avatarcontactme.svg" alt="Contact Avatar" className="contact-avatar" />
+            </div>
         </div>
-      </div>
-    </div>
-  );
+    );
 };
 
 export default Contact;

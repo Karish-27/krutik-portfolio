@@ -1,79 +1,224 @@
+/* ===== About Section ===== */
 .about-section {
-  display: flex;
-  /* align-items: center; */
-  /* justify-content: flex-start; */
-  /* place-items: center; */
   position: relative;
-  opacity: 1;
-  height: auto;
-  width: 100vw;
-  margin-left: calc((100% - 100vw) / 2);
-  margin-right: calc((100% - 100vw) / 2);
+  width: 100%;
+  background-color: #000000;
+  background-image: url('/images/AboutmeBG.svg');
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  overflow: hidden;
   padding: 0;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr;
 }
-.about-me {
-  padding-left:  60px;
-  padding-right: 60px;
-  margin-left: 30px;
-  margin-top: 30px;
+
+/* --- Top Marquee --- */
+.about-top-marquee {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
-  max-width: 100%;
-}
-.about-me h3 {
-  font-size: 25px;
+  padding: 18px 5%;
+  font-family: 'Micro 5', 'Courier New', monospace;
+  font-size: clamp(14px, 2vw, 25px);
+  color: rgba(255, 255, 255, 0.216);
+  letter-spacing: 0.7em;
   text-transform: uppercase;
-  letter-spacing: 7px;
-  font-weight: 400;
-  color: var(--accentColor);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  box-sizing: border-box;
 }
 
-.about-me p {
-  font-size: 33px;
-  font-weight: 600;
-  line-height: 36px;
-  letter-spacing: 1px;
+/* --- Main Content Grid --- */
+.about-content {
+  display: flex;
   width: 100%;
+  flex: 1;
+  padding: 40px 5% 0 5%;
+  position: relative;
+  z-index: 2;
+  box-sizing: border-box;
 }
 
-@media only screen and (min-width: 600px) {
-  .about-section {
-    justify-content: center;
-  }
+/* --- Left Column --- */
+.about-left {
+  flex: 1 1 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  min-width: 0;
 }
-@media only screen and (min-width: 768px) {
-  .about-me {
-    width: 100%;
-    max-width: 100%;
-    transform: translateY(0%);
-  }
-  .about-section {
-    opacity: 1;
-  }
+
+.about-who {
+  padding-top: 20px;
 }
-@media only screen and (min-width: 1025px) {
-  .about-section {
-    width: 100%;
-    /* justify-content: center; */
-    max-width: 100%;
-    /* avoid forcing a full viewport height which creates extra spacing
-       below the hero; allow content to size naturally and add a modest
-       top padding so the section isn't flush against the previous one */
-    height: auto;
-    padding: 0;
-    opacity: 1;
-  }
-  .about-me {
-    padding: 0 80px;
-    width: 100%;
-  }
-  .about-me p {
-    font-size: 1.9vw;
-    line-height: 2.3vw;
-  }
+
+.about-who-title {
+  font-family: 'Anton', sans-serif;
+  font-size: clamp(20px, 2.5vw, 36px);
+  font-weight: 400;
+  color: #ffffff;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  line-height: 1.0;
 }
-@media only screen and (min-width: 1950px) {
-  .about-me p {
-    font-size: 2.5rem;
-    line-height: 2.7rem;
+
+.about-who-sub {
+  font-family: 'Micro 5', 'Courier New', monospace;
+  font-size: clamp(12px, 1.5vw, 20px);
+  color: rgba(255, 255, 255, 0.99);
+  letter-spacing: 0.15em;
+  margin: 4px 0 0 0;
+  text-transform: uppercase;
+}
+
+/* --- Avatar --- */
+.about-avatar-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  margin: auto auto 0 auto;
+  z-index: 3;
+}
+
+.about-avatar {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  object-position: bottom;
+  pointer-events: none;
+  transform: translateY(4px);
+}
+
+/* --- Right Column --- */
+.about-right {
+  flex: 1 1 55%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  /* justify-content: space-between; */
+  padding-left: 5%;
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+/* --- ABOUT ME Heading --- */
+.about-heading {
+  font-family: 'Anton', sans-serif;
+  font-size: clamp(50px, 8vw, 140px);
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  margin-bottom: 100px;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+.about-heading span {
+  display: block;
+}
+
+/* --- Description --- */
+.about-description {
+  font-family: 'Raleway', sans-serif;
+  font-size: clamp(12px, 1.1vw, 16px);
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.7;
+  text-align: justify;
+  max-width: 100%;
+  margin: 10px 0;
+  box-sizing: border-box;
+}
+
+/* --- DESIGNER Label --- */
+.about-designer-label {
+  position: absolute;
+  bottom: 30px;
+  right: 5%;
+  font-family: 'Micro 5', 'Courier New', monospace;
+  font-size: clamp(16px, 2vw, 28px);
+  color: rgb(255, 255, 255);
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  text-align: right;
+  z-index: 3;
+}
+
+/* --- Background Watermark --- */
+.about-watermark {
+  position: absolute;
+  left: 50%;
+  top: 75%;
+  transform: translate(-50%, -50%);
+  font-family: 'Anton', sans-serif;
+  font-size: clamp(100px, 30vw, 550px);
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.1);
+  text-transform: uppercase;
+  white-space: nowrap;
+  letter-spacing: -0.04em;
+  line-height: 0.8;
+  width: 100%;
+  text-align: center;
+  z-index: 1;
+  pointer-events: none;
+  user-select: none;
+}
+
+
+/* ===== Responsive ===== */
+@media only screen and (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    padding: 20px 5% 0 5%;
+  }
+
+  .about-left {
+    flex: none;
+    order: 2;
+    align-items: center;
+  }
+
+  .about-right {
+    flex: none;
+    order: 1;
+    align-items: center;
+    padding-left: 0;
+  }
+
+  .about-heading {
+    text-align: center;
+    align-items: center;
+    font-size: clamp(50px, 15vw, 100px);
+  }
+
+  .about-description {
+    text-align: center;
+    max-width: 90%;
+  }
+
+  .about-designer-label {
+    text-align: center;
+  }
+
+  .about-who {
+    text-align: center;
+  }
+
+  .about-avatar-wrapper {
+    max-width: 300px;
+    margin: 20px auto 0 auto;
   }
 }
