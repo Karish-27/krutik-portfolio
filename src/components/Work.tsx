@@ -43,9 +43,6 @@ const Work = () => {
 
         function setTranslateX() {
             const box = document.getElementsByClassName("work-box");
-            const rectLeft = document
-                .querySelector(".work-container")!
-                .getBoundingClientRect().left;
             const rect = box[0].getBoundingClientRect();
             const parentWidth = box[0].parentElement!.getBoundingClientRect().width;
             translateX = rect.width * box.length - parentWidth;
