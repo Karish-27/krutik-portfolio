@@ -39,7 +39,7 @@ const About = () => {
 
       {/* Background watermark text */}
       <div className="about-watermark" aria-hidden="true">
-        ABOUT ME
+        ABOUT
       </div>
     </div>
   );
