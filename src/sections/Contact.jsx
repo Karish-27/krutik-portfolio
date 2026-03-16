@@ -7,15 +7,15 @@ import { Icon } from "@iconify/react/dist/iconify.js";
 
 const Contact = () => {
   const icon = "mdi:star-four-points";
-  const text = `Whether it’s a new build or improving
-    an existing product, I’m open to
-    meaningful conversations.`;
+  const text = `Whether it’s a new idea or
+improving an existing product,
+let’s connect and build something.`;
   const items = [
-    "Your Vision, My Engineering",
-    "Your Vision, My Engineering",
-    "Your Vision, My Engineering",
-    "Your Vision, My Engineering",
-    "Your Vision, My Engineering",
+    "Your Vision, My Execution",
+    "Your Vision, My Execution",
+    "Your Vision, My Execution",
+    "Your Vision, My Execution",
+    "Your Vision, My Execution",
   ];
   useGSAP(() => {
     gsap.from(".social-link", {
@@ -36,7 +36,7 @@ const Contact = () => {
         <div>
           <AnimatedHeaderSection
             subTitle={"Let’s Connect, Let’s Create"}
-            title={"Contact"}
+            title={"Contact Me"}
             text={text}
             textColor={"text-white"}
             withScrollTrigger={true}
@@ -47,14 +47,14 @@ const Contact = () => {
                 <h2>E-mail</h2>
                 <div className="w-full h-px my-2 bg-white/30" />
                 <p className="text-xl tracking-wider lowercase md:text-2xl lg:text-3xl">
-                  dev.syednoor@gmail.com
+                  krutikparmar119@gmail.com
                 </p>
               </div>
               <div className="social-link">
                 <h2>Phone</h2>
                 <div className="w-full h-px my-2 bg-white/30" />
                 <p className="text-xl lowercase md:text-2xl lg:text-3xl">
-                  +880 1782 734573
+                  +91 9265542717
                 </p>
               </div>
               <div className="social-link">
@@ -65,6 +65,8 @@ const Contact = () => {
                     <a
                       key={index}
                       href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="text-xs leading-loose tracking-wides uppercase md:text-sm hover:text-white/80 transition-colors duration-200"
                     >
                       {"[ "}
@@ -86,7 +88,7 @@ const Contact = () => {
               key={index}
               className="flex items-center px-3 md:px-4 gap-x-6 md:gap-x-8 lg:px-5 lg:gap-x-10"
             >
-              {item} <Icon icon={icon} className="text-gold" />
+              {item} <Icon icon={icon} className="text-[#FFAC13]" />
             </span>
           ))}
         </Marquee>

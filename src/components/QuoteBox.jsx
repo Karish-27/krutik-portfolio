@@ -6,71 +6,70 @@ const quotes = [
   {
     text: (
       <p>
-        “ Great software is built <br />
-        when a <span className="text-gold">developer learns</span>
+        “ Good design begins <br />
+        when a <span className="text-gold">designer listens</span>
         <br />
-        to <span className="italic">think clearly</span> before
+        to <span className="italic">users carefully</span> before
         <br />
-        <span className="font-[600]">typing anything</span>. ” <br />
-        <span className="text-base opacity-70">— Kent Beck</span>
+        creating <span className="font-[600]">anything</span>. ” <br />
+        <span className="text-base opacity-70">— Don Norman</span>
       </p>
     ),
   },
   {
     text: (
       <p>
-        “ A true engineer writes <br />
-        <span className="font-[600]">simple solutions</span>
-        <br />
-        to{" "}<span className="italic">problems that once</span> <br />
-        seemed <span className="text-gold">impossible</span>. ” <br />
-        <span className="text-sm opacity-70">— Martin Fowler</span>
-      </p>
-    ),
-  },
-  {
-    text: (
-      <p>
-        “ The best code feels like <br />
-        <span className="font-[600]">a quiet conversation</span>
-        <br />
-        <span className="italic">where every line</span>{" "}knows
-        <br />
-        it&apos;s <span className="text-gold">purpose</span>. ” <br />
-        <span className="text-sm opacity-70">— Robert C. Martin</span>
-      </p>
-    ),
-  },
-  {
-    text: (
-      <p>
-        “ Good engineers reduce <br />
+        “ Great design turns <br />
         <span className="font-[600]">complex ideas</span>
         <br />
-        <span className="italic">into systems</span>{" "}that work
-        <br />
-        with <span className="text-gold">elegance</span>. ” <br />
-        <span className="text-sm opacity-70">— Linus Torvalds</span>
+        into <span className="italic">clear experiences</span> <br />
+        people can <span className="text-gold">understand</span>. ” <br />
+        <span className="text-sm opacity-70">— Dieter Rams</span>
       </p>
     ),
   },
   {
     text: (
       <p>
-        “ Engineering is art that <br />
-        <span className="font-[600]">solves real problems</span>
+        “ The best interfaces feel <br />
+        like <span className="font-[600]">natural interactions</span>
         <br />
-        with{" "}<span className="italic">logic shaped </span>
+        where every element
         <br />
-        into{" "}<span className="text-gold">structure</span>. ” <br />
-        <span className="text-sm opacity-70">— Bjarne Stroustrup</span>
+        has a <span className="text-gold">purpose</span>. ” <br />
+        <span className="text-sm opacity-70">— Steve Jobs</span>
+      </p>
+    ),
+  },
+  {
+    text: (
+      <p>
+        “ Design is about <br />
+        <span className="font-[600]">making things simple</span>
+        <br />
+        not just making them <br />
+        <span className="italic">look beautiful</span>. ” <br />
+        <span className="text-sm opacity-70">— John Maeda</span>
+      </p>
+    ),
+  },
+  {
+    text: (
+      <p>
+        “ A thoughtful designer <br />
+        turns <span className="font-[600]">user problems</span>
+        <br />
+        into experiences that
+        <br />
+        feel <span className="text-gold">effortless</span>. ” <br />
+        <span className="text-sm opacity-70">— Alan Cooper</span>
       </p>
     ),
   },
 ];
 
 const QuoteBox = () => {
-    const icon = "mdi:arrow-bottom-right";
+  const icon = "mdi:arrow-bottom-right";
   const quoteRef = useRef(null);
   const [currentIndex, setCurrentIndex] = useState(
     Math.floor(Math.random() * quotes.length)

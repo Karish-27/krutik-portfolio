@@ -3,7 +3,7 @@ import { socials } from "../constants";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { Link } from "react-scroll";
-import logo from "/assets/logo.png";
+import logo from "/assets/Logo.svg";
 
 const Navbar = () => {
   const navRef = useRef(null);
@@ -132,7 +132,7 @@ const Navbar = () => {
           <div className="font-light">
             <p className="tracking-wider text-white/50">E-mail</p>
             <p className="text-xl tracking-widest lowercase text-pretty">
-              dev.syednoor@gmail.com
+              krutikparmar119@gmail.com
             </p>
           </div>
           <div className="font-light">

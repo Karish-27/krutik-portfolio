@@ -10,9 +10,9 @@ const Works = () => {
   const previewRef = useRef(null);
 
   const [currentIndex, setCurrentIndex] = useState(null);
-  const text = `Featured projects reflects my process of solving
-    real problems, Combining usability, performance,
-    and clean logic Work with purpose.`;
+  const text = `Featured projects reflect my experience
+working across different products and
+design challenges.`;
 
   const mouse = useRef({ x: 0, y: 0 });
   const moveX = useRef(null);
@@ -28,7 +28,7 @@ const Works = () => {
       ease: "power3.out",
     });
 
-    gsap.from("#project", {
+    gsap.from(".project-row", {
       y: 100,
       opacity: 0,
       delay: 0.5,
@@ -36,7 +36,7 @@ const Works = () => {
       stagger: 0.3,
       ease: "back.out",
       scrollTrigger: {
-        trigger: "#project",
+        trigger: ".project-row",
       },
     });
   }, []);
@@ -102,7 +102,7 @@ const Works = () => {
   return (
     <section id="work" className="flex flex-col min-h-screen">
       <AnimatedHeaderSection
-        subTitle={"Structure in Code, Story in Results."}
+        subTitle={"Structure in Thinking, Story in Results."}
         title={"Works"}
         text={text}
         textColor={"text-black"}
@@ -113,10 +113,12 @@ const Works = () => {
         onMouseMove={handleMouseMove}
       >
         {projects.map((project, index) => (
-          <div
+          <a
             key={project.id}
-            id="project"
-            className="relative flex flex-col gap-1 py-5 cursor-pointer group md:gap-0"
+            href={project.href}
+            target="_blank"
+            rel="noreferrer"
+            className="project-row relative flex flex-col w-full z-10 gap-1 py-5 cursor-pointer group md:gap-0"
             onMouseEnter={() => handleMouseEnter(index)}
             onMouseLeave={() => handleMouseLeave(index)}
           >
@@ -133,12 +135,10 @@ const Works = () => {
               <h2 className="lg:text-[32px] text-[26px] leading-none">
                 {project.name}
               </h2>
-              <a href={project.href} target="_blank">
-                <Icon
-                  icon="lucide:arrow-up-right"
-                  className="md:size-6 size-5"
-                />
-              </a>
+              <Icon
+                icon="lucide:arrow-up-right"
+                className="md:size-6 size-5"
+              />
             </div>
             {/* divider */}
             <div className="w-full h-0.5 bg-black/80" />
@@ -163,7 +163,7 @@ const Works = () => {
                 />
               </div>
             </div>
-          </div>
+          </a>
         ))}
         {/* desktop Flaoting preview image */}
         <div

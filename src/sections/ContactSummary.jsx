@@ -5,11 +5,11 @@ import QuoteBox from "../components/QuoteBox";
 const ContactSummary = () => {
   const icon = "mdi:star-four-points";
   const items = [
-    "Innovation",
-    "Precision",
-    "Trust",
-    "Collaboration",
-    "Excellence",
+    "Figma",
+    "Affinity",
+    "Webflow",
+    "Framer",
+    "Photoshop",
   ];
 
   const items2 = ["Foundation", "Scalability", "Evolve", "Deployment", "Architecture"];

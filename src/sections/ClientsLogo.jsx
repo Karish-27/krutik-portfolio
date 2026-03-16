@@ -2,33 +2,33 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import projotnoTea from "/assets/clients/projotno_tea.jpg";
-import axisway from "/assets/clients/axisway.jpg";
-import pulseFitness from "/assets/clients/pulse_fitness.jpg";
-import playwearBD from "/assets/clients/playwearBD.jpg";
-import interaid from "/assets/clients/interaid.jpg";
-import puppetbrush from "/assets/clients/puppetbrush.jpg";
-import qahaf from "/assets/clients/qahaf.jpg";
-import retrofino from "/assets/clients/retrofino.jpg";
-import sikder_foundation from "/assets/clients/sikder_foundation.jpg";
-import treatosBD from "/assets/clients/treatosBD.jpg";
-import posterOne from "/assets/posters/poster-1.jpg";
-import posterTwo from "/assets/posters/poster-2.jpg";
+import Domain1 from "/assets/clients/Domain1.jpg";
+import Domain2 from "/assets/clients/Domain2.jpg";
+import Domain3 from "/assets/clients/Domain3.jpg";
+import Domain4 from "/assets/clients/Domain4.jpg";
+import Domain5 from "/assets/clients/Domain5.jpg";
+import Domain6 from "/assets/clients/Domain6.jpg";
+import Domain7 from "/assets/clients/Domain7.jpg";
+import Domain8 from "/assets/clients/Domain8.jpg";
+import Domain9 from "/assets/clients/Domain9.jpg";
+import Domain10 from "/assets/clients/Domain10.jpg";
+import posterOne from "/assets/posters/poster1.jpg";
+import posterTwo from "/assets/posters/poster2.jpg";
 import AnimatedHeaderSection from "../components/AnimatedHeaderSection";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const PLACEHOLDER_LOGOS = [
-  projotnoTea,
-  axisway,
-  playwearBD,
-  interaid,
-  puppetbrush,
-  qahaf,
-  retrofino,
-  sikder_foundation,
-  treatosBD,
-  pulseFitness,
+  Domain1,
+  Domain2,
+  Domain3,
+  Domain4,
+  Domain5,
+  Domain6,
+  Domain7,
+  Domain8,
+  Domain9,
+  Domain10,
 ];
 
 const LogoCell = ({ logo, borderClasses = "" }) => {
@@ -44,9 +44,9 @@ const LogoCell = ({ logo, borderClasses = "" }) => {
 export default function ClientsLogo() {
   const itemsRef = useRef([]);
   const containerRef = useRef(null);
-  const text = `From startups to global teams, I build 
-  tools that ship. Solving real problems  
-  with precision and clarity.`;
+  const text = `From startups to growing businesses,
+I design experiences across multiple
+product and industry domains.`;
   useEffect(() => {
     const nodes = itemsRef.current.filter(Boolean);
     if (!nodes.length) return;
@@ -78,8 +78,8 @@ export default function ClientsLogo() {
       <div className="">
         {/* Header */}
         <AnimatedHeaderSection
-          subTitle={"Brands i've Worked With"}
-          title={"Clients"}
+          subTitle={"Domains I've Worked On"}
+          title={"Domains"}
           text={text}
           textColor={"text-black"}
           withScrollTrigger={true}
