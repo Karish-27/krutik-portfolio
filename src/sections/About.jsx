@@ -8,7 +8,7 @@ const About = () => {
   const text = `Crafting impactful digital experiences that
     blend design, technology, and
     strategy.`;
-  const aboutText = `I'm a passionate full-stack developer and digital strategist who believes that great ideas deserve exceptional execution. With a background in building scalable web applications, eCommerce platforms, and marketing solutions, I help startups and businesses bring their visions to life — pixel by pixel, line by line.
+  const aboutText = `I'm a passionate full-stack developer and digital strategist who believes that great ideas deserve exceptional execution. With a background in building scalable web applications, eCommerce platforms, and marketing solutions, I help startups and businesses bring their visions to life - pixel by pixel, line by line.
 
   My work blends clean, modern aesthetics with performance-driven functionality. Whether it's designing an intuitive user interface, optimizing a campaign funnel, or automating a workflow, I focus on delivering results that matter.
 
