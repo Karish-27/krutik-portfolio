@@ -11,11 +11,11 @@ const Contact = () => {
 improving an existing product,
 let’s connect and build something.`;
   const items = [
-    "Your Vision, My Execution",
-    "Your Vision, My Execution",
-    "Your Vision, My Execution",
-    "Your Vision, My Execution",
-    "Your Vision, My Execution",
+    "Contact Me",
+    "Open for Design Collaborations",
+    "Let’s Create Better Experiences",
+    "Crafting Ideas into Visual Stories",
+    "Turning Concepts into Experiences",
   ];
   useGSAP(() => {
     gsap.from(".social-link", {
