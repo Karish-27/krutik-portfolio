@@ -12,7 +12,7 @@ const quotes = [
         to <span className="italic">users carefully</span> before
         <br />
         creating <span className="font-[600]">anything</span>. ” <br />
-        <span className="text-base opacity-70">— Don Norman</span>
+        <span className="text-base opacity-70">- Don Norman</span>
       </p>
     ),
   },
@@ -24,7 +24,7 @@ const quotes = [
         <br />
         into <span className="italic">clear experiences</span> <br />
         people can <span className="text-gold">understand</span>. ” <br />
-        <span className="text-sm opacity-70">— Dieter Rams</span>
+        <span className="text-sm opacity-70">- Dieter Rams</span>
       </p>
     ),
   },
@@ -37,7 +37,7 @@ const quotes = [
         where every element
         <br />
         has a <span className="text-gold">purpose</span>. ” <br />
-        <span className="text-sm opacity-70">— Steve Jobs</span>
+        <span className="text-sm opacity-70">- Steve Jobs</span>
       </p>
     ),
   },
@@ -49,7 +49,7 @@ const quotes = [
         <br />
         not just making them <br />
         <span className="italic">look beautiful</span>. ” <br />
-        <span className="text-sm opacity-70">— John Maeda</span>
+        <span className="text-sm opacity-70">- John Maeda</span>
       </p>
     ),
   },
@@ -62,7 +62,7 @@ const quotes = [
         into experiences that
         <br />
         feel <span className="text-gold">effortless</span>. ” <br />
-        <span className="text-sm opacity-70">— Alan Cooper</span>
+        <span className="text-sm opacity-70">- Alan Cooper</span>
       </p>
     ),
   },
