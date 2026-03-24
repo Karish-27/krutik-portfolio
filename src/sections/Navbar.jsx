@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { socials } from "../constants";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { Link } from "react-scroll";
+import { useLenis } from "lenis/react";
 import logo from "/assets/Logo.svg";
 
 const Navbar = () => {
@@ -15,6 +15,7 @@ const Navbar = () => {
   const iconTl = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
   const [showBurger, setShowBurger] = useState(true);
+  const lenis = useLenis();
   useGSAP(() => {
     gsap.set(navRef.current, { xPercent: 100 });
     gsap.set([linksRef.current, contactRef.current], {
@@ -112,15 +113,15 @@ const Navbar = () => {
           {["home", "services", "about", "work", "contact"].map(
             (section, index) => (
               <div key={index} ref={(el) => (linksRef.current[index] = el)}>
-                <Link
-                  className="transition-all duration-700 cursor-pointer hover:text-white hover:tracking-[0.5rem] ease-in-out hover:font-bold"
-                  to={`${section}`}
-                  smooth
-                  offset={0}
-                  duration={2000}
+                <button
+                  className="uppercase transition-all duration-700 cursor-pointer hover:text-white hover:tracking-[0.5rem] ease-in-out hover:font-bold"
+                  onClick={() => {
+                    lenis?.scrollTo(`#${section}`, { duration: 2 });
+                    toggleMenu();
+                  }}
                 >
                   {section}
-                </Link>
+                </button>
               </div>
             )
           )}

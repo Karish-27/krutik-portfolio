@@ -171,7 +171,7 @@ export const socials = [
   { name: "Behance", href: "https://www.behance.net/krutikp" },
   {
     name: "Dribble",
-    href: "https://www.behance.net/krutikp",
+    href: "https://dribbble.com/Krutik_Parmar",
   },
   { name: "LinkedIn", href: "https://www.linkedin.com/in/krutikparmar1" },
   { name: "Resume", href: "/UIUX_Designer_CV.pdf" },
