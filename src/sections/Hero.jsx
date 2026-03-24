@@ -11,7 +11,7 @@ Made for people`;
   return (
     <section id="home" className="flex flex-col justify-center md:justify-end min-h-screen">
       <AnimatedHeaderSection
-        subTitle={"UI/IX DESIGNER"}
+        subTitle={"UI/UX DESIGNER"}
         title={"Krutik Parmar"}
         text={text}
         textColor={"text-black"}

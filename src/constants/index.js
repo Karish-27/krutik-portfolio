@@ -127,7 +127,7 @@ export const projects = [
     name: "DIGITALWAY - Digital Marketing Agency Branding",
     description:
       "Lumivance is an ope-source Next.js eCommerce frontend project. It provides a modern, fast and customizable shopping UI.",
-    href: "https://www.behance.net/gallery/245181825/CRYPTO-Concept-Appe",
+    href: "https://www.behance.net/gallery/246041395/DIGITALWAY-Branding",
     image: "/assets/projects/4.jpg",
     bgImage: "/assets/projects/4.jpg",
     frameworks: [
