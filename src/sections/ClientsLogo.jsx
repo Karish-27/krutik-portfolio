@@ -36,7 +36,7 @@ const LogoCell = ({ logo, borderClasses = "" }) => {
     <div
       className={`w-full aspect-square flex justify-center items-center relative ${borderClasses} overflow-hidden`}
     >
-      <img src={logo} alt="client logo" className={`absolute object-cover`} />
+      <img src={logo} alt="client logo" className="absolute inset-0 w-full h-full object-cover" />
     </div>
   );
 };
@@ -173,25 +173,28 @@ product and industry domains.`;
         {/* Bento Grid - Mobile*/}
         <div className="mt-10 px-4 md:px-10">
           <div className="md:hidden grid grid-cols-3">
-            <LogoCell logo={PLACEHOLDER_LOGOS[0]} borderClasses="border-r" />
-            <LogoCell logo={PLACEHOLDER_LOGOS[1]} borderClasses="border-r" />
-            <LogoCell logo={PLACEHOLDER_LOGOS[2]} />
+            <LogoCell logo={PLACEHOLDER_LOGOS[0]} borderClasses="border-r border-b" />
+            <LogoCell logo={PLACEHOLDER_LOGOS[1]} borderClasses="border-r border-b" />
+            <LogoCell logo={PLACEHOLDER_LOGOS[2]} borderClasses="border-b" />
 
-            <div className="col-span-3 aspect-square flex justify-center items-center p-5 border-y">
+            <div className="col-span-3 aspect-square flex justify-center items-center p-5 border-b">
               <img src={posterOne} alt="poster one" className="w-full h-full" />
             </div>
-            <LogoCell logo={PLACEHOLDER_LOGOS[3]} borderClasses="border-r" />
-            <LogoCell logo={PLACEHOLDER_LOGOS[4]} borderClasses="border-r" />
-            <LogoCell logo={PLACEHOLDER_LOGOS[5]} height="h-8" />
-            <LogoCell
-              logo={PLACEHOLDER_LOGOS[6]}
-              borderClasses="border-t border-r"
-            />
-            <LogoCell
-              logo={PLACEHOLDER_LOGOS[7]}
-              borderClasses="border-t border-r"
-            />
-            <LogoCell logo={PLACEHOLDER_LOGOS[8]} borderClasses="border-t" />
+            <LogoCell logo={PLACEHOLDER_LOGOS[3]} borderClasses="border-r border-b" />
+            <LogoCell logo={PLACEHOLDER_LOGOS[4]} borderClasses="border-r border-b" />
+            <LogoCell logo={PLACEHOLDER_LOGOS[5]} borderClasses="border-b" />
+            <LogoCell logo={PLACEHOLDER_LOGOS[6]} borderClasses="border-r border-b" />
+            <LogoCell logo={PLACEHOLDER_LOGOS[7]} borderClasses="border-r border-b" />
+            <LogoCell logo={PLACEHOLDER_LOGOS[8]} borderClasses="border-b" />
+
+            <div className="col-span-3 aspect-square flex justify-center items-center p-5 border-b">
+              <img src={posterTwo} alt="poster two" className="w-full h-full" />
+            </div>
+            <div className="col-span-3 flex justify-center">
+              <div className="w-1/3 aspect-square flex justify-center items-center relative overflow-hidden">
+                <img src={PLACEHOLDER_LOGOS[9]} alt="client logo" className="absolute inset-0 w-full h-full object-cover" />
+              </div>
+            </div>
           </div>
         </div>
       </div>

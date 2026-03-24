@@ -8,11 +8,11 @@ const About = () => {
   const text = `Crafting impactful digital experiences that
     blend design, technology, and
     strategy.`;
-  const aboutText = `I'm a passionate full-stack developer and digital strategist who believes that great ideas deserve exceptional execution. With a background in building scalable web applications, eCommerce platforms, and marketing solutions, I help startups and businesses bring their visions to life - pixel by pixel, line by line.
+  const aboutText = `I am a UI/UX designer based in Vadodara, focused on creating practical and well-structured digital experiences. Since 2019, I have been working with startups, businesses, and independent clients to design interfaces that solve real problems and support product growth.
 
-  My work blends clean, modern aesthetics with performance-driven functionality. Whether it's designing an intuitive user interface, optimizing a campaign funnel, or automating a workflow, I focus on delivering results that matter.
+My approach centers on understanding users, organizing information clearly, and shaping interfaces that feel natural to navigate. I work across research, wireframing, prototyping, and visual design to turn early concepts into polished digital products.
 
-  When I'm not coding or creating, you'll find me exploring new tech trends, experimenting with animations, or refining UI/UX flows to the last detail.`;
+Over the years I have contributed to web and mobile applications across different industries, helping teams translate ideas into clear product experiences. I pay close attention to structure, interaction, and visual balance so the final result feels both functional and refined.`;
   const imgRef = useRef(null);
   useGSAP(() => {
     gsap.to("#about", {
